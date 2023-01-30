@@ -20,6 +20,8 @@
 		88A816512984356D00A102DB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816502984356D00A102DB /* AuthViewModel.swift */; };
 		88A816542984359300A102DB /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816532984359300A102DB /* AuthView.swift */; };
 		88B5E4702986FC4C00568BB5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E46F2986FC4C00568BB5 /* Color.swift */; };
+		88B5E47729880A0300568BB5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E47629880A0300568BB5 /* AuthRepository.swift */; };
+		88B5E47929880A1900568BB5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E47829880A1900568BB5 /* Status.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		88A816502984356D00A102DB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		88A816532984359300A102DB /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		88B5E46F2986FC4C00568BB5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		88B5E47629880A0300568BB5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		88B5E47829880A1900568BB5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		88A816232984351200A102DB /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				88B5E475298809ED00568BB5 /* Services */,
+				88B5E474298809E500568BB5 /* Repositories */,
 				88B5E46E2986FC3E00568BB5 /* Extensions */,
 				88A8164E2984354200A102DB /* Views */,
 				88A816242984351200A102DB /* StatusApp.swift */,
@@ -175,6 +181,22 @@
 				88B5E46F2986FC4C00568BB5 /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88B5E474298809E500568BB5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				88B5E47629880A0300568BB5 /* AuthRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		88B5E475298809ED00568BB5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88B5E47829880A1900568BB5 /* Status.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,11 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				881C39082985AE390093E23F /* LoginView.swift in Sources */,
+				88B5E47929880A1900568BB5 /* Status.swift in Sources */,
 				88A816272984351200A102DB /* ContentView.swift in Sources */,
 				881C39062985AE250093E23F /* RegisterView.swift in Sources */,
 				88A816252984351200A102DB /* StatusApp.swift in Sources */,
 				88A816542984359300A102DB /* AuthView.swift in Sources */,
 				88B5E4702986FC4C00568BB5 /* Color.swift in Sources */,
+				88B5E47729880A0300568BB5 /* AuthRepository.swift in Sources */,
 				88A816512984356D00A102DB /* AuthViewModel.swift in Sources */,
 				881C390A2985AEBC0093E23F /* Inputs.swift in Sources */,
 			);
