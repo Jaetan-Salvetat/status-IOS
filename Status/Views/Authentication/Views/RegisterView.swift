@@ -28,7 +28,7 @@ struct RegisterView: View {
             Button("S'inscrire") {}
                 .padding([.top, .bottom], 15)
                 .buttonStyle(AuthButtonStyle())
-            
+             
             HStack {
                 Text("Vous avez déjà un compte ?")
                     .font(.system(size: 12))

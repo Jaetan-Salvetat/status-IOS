@@ -22,6 +22,10 @@
 		88B5E4702986FC4C00568BB5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E46F2986FC4C00568BB5 /* Color.swift */; };
 		88B5E47729880A0300568BB5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E47629880A0300568BB5 /* AuthRepository.swift */; };
 		88B5E47929880A1900568BB5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E47829880A1900568BB5 /* Status.swift */; };
+		88B5E47B298815E200568BB5 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */; };
+		88B5E47C298815E200568BB5 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */; };
+		88B5E47D298815E200568BB5 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */; };
+		88B5E481298822F300568BB5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E480298822F300568BB5 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		88B5E46F2986FC4C00568BB5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		88B5E47629880A0300568BB5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		88B5E47829880A1900568BB5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
+		88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseConfig.xcconfig; sourceTree = "<group>"; };
+		88B5E47F29881AFE00568BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		88B5E480298822F300568BB5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,8 @@
 		88A816182984351200A102DB = {
 			isa = PBXGroup;
 			children = (
+				88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */,
+				88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */,
 				88A816232984351200A102DB /* Status */,
 				88A816342984351400A102DB /* StatusTests */,
 				88A8163E2984351400A102DB /* StatusUITests */,
@@ -110,6 +120,7 @@
 		88A816232984351200A102DB /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				88B5E47F29881AFE00568BB5 /* Info.plist */,
 				88B5E475298809ED00568BB5 /* Services */,
 				88B5E474298809E500568BB5 /* Repositories */,
 				88B5E46E2986FC3E00568BB5 /* Extensions */,
@@ -179,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				88B5E46F2986FC4C00568BB5 /* Color.swift */,
+				88B5E480298822F300568BB5 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +317,7 @@
 			files = (
 				88A8162C2984351400A102DB /* Preview Assets.xcassets in Resources */,
 				88A816292984351400A102DB /* Assets.xcassets in Resources */,
+				88B5E47B298815E200568BB5 /* DebugConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B5E47C298815E200568BB5 /* DebugConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B5E47D298815E200568BB5 /* DebugConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				881C39082985AE390093E23F /* LoginView.swift in Sources */,
+				88B5E481298822F300568BB5 /* String.swift in Sources */,
 				88B5E47929880A1900568BB5 /* Status.swift in Sources */,
 				88A816272984351200A102DB /* ContentView.swift in Sources */,
 				881C39062985AE250093E23F /* RegisterView.swift in Sources */,
@@ -377,6 +393,7 @@
 /* Begin XCBuildConfiguration section */
 		88A816432984351400A102DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -437,6 +454,7 @@
 		};
 		88A816442984351400A102DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -491,6 +509,7 @@
 		};
 		88A816462984351400A102DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,16 +518,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Status/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Status/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Status;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -519,6 +540,7 @@
 		};
 		88A816472984351400A102DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -527,16 +549,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Status/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Status/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Status;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -627,7 +651,7 @@
 				88A816442984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		88A816452984351400A102DB /* Build configuration list for PBXNativeTarget "Status" */ = {
 			isa = XCConfigurationList;
@@ -636,7 +660,7 @@
 				88A816472984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		88A816482984351400A102DB /* Build configuration list for PBXNativeTarget "StatusTests" */ = {
 			isa = XCConfigurationList;
@@ -645,7 +669,7 @@
 				88A8164A2984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		88A8164B2984351400A102DB /* Build configuration list for PBXNativeTarget "StatusUITests" */ = {
 			isa = XCConfigurationList;
@@ -654,7 +678,7 @@
 				88A8164D2984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

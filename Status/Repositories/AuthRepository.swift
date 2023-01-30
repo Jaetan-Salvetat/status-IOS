@@ -24,6 +24,8 @@ let dataTask = URLSession.shared.dataTask(with: request) { data, response, error
 dataTask.resume()*/
 
 class AuthRepository {
+     private let apiUri = Bundle.main.infoDictionary?["API_BASE_URL"] as! String // \(apiUri)/auth/login
+    
     func login() async -> Int {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
         UserDefaults.standard.set("myToken", forKey: Status.TOKEN_KEY)

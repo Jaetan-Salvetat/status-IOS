@@ -42,7 +42,7 @@ class AuthViewModel: ObservableObject {
     }
     
     func getYears() -> [String] {
-        let maxYear = Calendar.current.component(.year, from: Date.now)
+        let maxYear = Calendar.current.component(.year, from: Date())
         let minYear = maxYear - 100
         var years: [String] = []
         
