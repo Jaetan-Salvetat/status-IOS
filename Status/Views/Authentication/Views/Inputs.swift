@@ -10,13 +10,14 @@ import SwiftUI
 struct Input: View {
     @State var value: String
     var title: String
-    
+    var errorMassage: String?
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
                 .foregroundColor(Color.darkGray)
                 .fontWeight(Font.Weight.medium)
-            
+
             HStack {
                 TextField("", text: $value)
                     .frame(height: 32)
@@ -31,13 +32,13 @@ struct Input: View {
 struct SecureInput: View {
     @State var value: String
     @State var showPassword = false
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Mot de passe")
                 .foregroundColor(Color.darkGray)
                 .fontWeight(Font.Weight.medium)
-            
+
             HStack {
                 if showPassword {
                     TextField("", text: $value)
@@ -62,13 +63,13 @@ struct SecureInput: View {
 
 struct DateInput: View {
     @ObservedObject var viewModel: AuthViewModel
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Date de naissance")
                 .foregroundColor(Color.darkGray)
                 .fontWeight(Font.Weight.medium)
-            
+
             HStack {
                 DropDown(
                     title: "Jour",
@@ -101,13 +102,12 @@ struct DateInput: View {
     }
 }
 
-
 private struct DropDown: View {
     var title: String
     var value: String
     var items: [String]
-    var onChange: (String) -> ()
-    
+    var onChange: (String) -> Void
+
     var body: some View {
         Menu {
             ForEach(items, id: \.self) { text in

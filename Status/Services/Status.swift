@@ -9,7 +9,6 @@ import Foundation
 
 class Status {
     static let authRepository = AuthRepository()
-    
-    
-    static let TOKEN_KEY = "token"
+
+    static let tokenKey = "token"
 }

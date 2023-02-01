@@ -10,6 +10,7 @@
 		881C39062985AE250093E23F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C39052985AE240093E23F /* RegisterView.swift */; };
 		881C39082985AE390093E23F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C39072985AE390093E23F /* LoginView.swift */; };
 		881C390A2985AEBC0093E23F /* Inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C39092985AEBC0093E23F /* Inputs.swift */; };
+		88580FF3298AA94C0097D893 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88580FF5298AA94C0097D893 /* Localizable.strings */; };
 		88A816252984351200A102DB /* StatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816242984351200A102DB /* StatusApp.swift */; };
 		88A816272984351200A102DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816262984351200A102DB /* ContentView.swift */; };
 		88A816292984351400A102DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A816282984351400A102DB /* Assets.xcassets */; };
@@ -49,6 +50,9 @@
 		881C39052985AE240093E23F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		881C39072985AE390093E23F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		881C39092985AEBC0093E23F /* Inputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs.swift; sourceTree = "<group>"; };
+		88580FF4298AA94C0097D893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		88580FF6298AA95D0097D893 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		88580FF8298ABF330097D893 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		88A816212984351200A102DB /* Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Status.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A816242984351200A102DB /* StatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusApp.swift; sourceTree = "<group>"; };
 		88A816262984351200A102DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		88A816182984351200A102DB = {
 			isa = PBXGroup;
 			children = (
+				88580FF8298ABF330097D893 /* .swiftlint.yml */,
+				88580FF5298AA94C0097D893 /* Localizable.strings */,
 				88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */,
 				88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */,
 				88A816232984351200A102DB /* Status */,
@@ -221,6 +227,7 @@
 				88A8161D2984351200A102DB /* Sources */,
 				88A8161E2984351200A102DB /* Frameworks */,
 				88A8161F2984351200A102DB /* Resources */,
+				88580FF7298ABDAA0097D893 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -296,6 +303,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
 				Base,
 			);
 			mainGroup = 88A816182984351200A102DB;
@@ -316,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A8162C2984351400A102DB /* Preview Assets.xcassets in Resources */,
+				88580FF3298AA94C0097D893 /* Localizable.strings in Resources */,
 				88A816292984351400A102DB /* Assets.xcassets in Resources */,
 				88B5E47B298815E200568BB5 /* DebugConfig.xcconfig in Resources */,
 			);
@@ -338,6 +347,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88580FF7298ABDAA0097D893 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88A8161D2984351200A102DB /* Sources */ = {
@@ -390,12 +419,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		88580FF5298AA94C0097D893 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88580FF4298AA94C0097D893 /* en */,
+				88580FF6298AA95D0097D893 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		88A816432984351400A102DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -457,6 +499,7 @@
 			baseConfigurationReference = 88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

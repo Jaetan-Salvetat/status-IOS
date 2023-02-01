@@ -9,22 +9,22 @@ import SwiftUI
 
 struct LoginView: View {
     @ObservedObject var viewModel: AuthViewModel
-    
+
     var body: some View {
         VStack {
             Text("Connectez-vous à Status")
                 .font(.system(size: 24, weight: .bold))
                 .padding([.bottom], 35)
-            
+
             Input(value: viewModel.email, title: "E-mail")
                 .padding([.bottom], 22)
             SecureInput(value: viewModel.password)
                 .padding([.bottom], 22)
-            
+
             Button("S'inscrire") {}
                 .padding([.top, .bottom], 15)
                 .buttonStyle(AuthButtonStyle())
-            
+
             HStack {
                 Text("Vous n’avez pas de compte ?")
                     .font(.system(size: 12))

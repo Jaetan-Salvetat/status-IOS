@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthView: View {
     @ObservedObject var viewModel = AuthViewModel()
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -22,20 +22,20 @@ struct AuthView: View {
                     .frame(width: 75)
                 Spacer()
             }
-            
+
             if viewModel.currentScreen == .register {
                 RegisterView(viewModel: viewModel)
             } else {
                 LoginView(viewModel: viewModel)
             }
-            
+
             Spacer()
         }.padding(EdgeInsets(top: 0, leading: 48, bottom: 0, trailing: 48))
     }
 }
 
 struct AuthButtonStyle: ButtonStyle {
-    
+
     func makeBody(configuration: Configuration) -> some View {
         HStack {
             Spacer()
