@@ -10,6 +10,7 @@
 		881C39062985AE250093E23F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C39052985AE240093E23F /* RegisterView.swift */; };
 		881C39082985AE390093E23F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C39072985AE390093E23F /* LoginView.swift */; };
 		881C390A2985AEBC0093E23F /* Inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C39092985AEBC0093E23F /* Inputs.swift */; };
+		88580FF3298AA94C0097D893 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88580FF5298AA94C0097D893 /* Localizable.strings */; };
 		88A816252984351200A102DB /* StatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816242984351200A102DB /* StatusApp.swift */; };
 		88A816272984351200A102DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816262984351200A102DB /* ContentView.swift */; };
 		88A816292984351400A102DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A816282984351400A102DB /* Assets.xcassets */; };
@@ -20,6 +21,12 @@
 		88A816512984356D00A102DB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816502984356D00A102DB /* AuthViewModel.swift */; };
 		88A816542984359300A102DB /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A816532984359300A102DB /* AuthView.swift */; };
 		88B5E4702986FC4C00568BB5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E46F2986FC4C00568BB5 /* Color.swift */; };
+		88B5E47729880A0300568BB5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E47629880A0300568BB5 /* AuthRepository.swift */; };
+		88B5E47929880A1900568BB5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E47829880A1900568BB5 /* Status.swift */; };
+		88B5E47B298815E200568BB5 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */; };
+		88B5E47C298815E200568BB5 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */; };
+		88B5E47D298815E200568BB5 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */; };
+		88B5E481298822F300568BB5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5E480298822F300568BB5 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,9 @@
 		881C39052985AE240093E23F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		881C39072985AE390093E23F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		881C39092985AEBC0093E23F /* Inputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs.swift; sourceTree = "<group>"; };
+		88580FF4298AA94C0097D893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		88580FF6298AA95D0097D893 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		88580FF8298ABF330097D893 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		88A816212984351200A102DB /* Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Status.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A816242984351200A102DB /* StatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusApp.swift; sourceTree = "<group>"; };
 		88A816262984351200A102DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +66,12 @@
 		88A816502984356D00A102DB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		88A816532984359300A102DB /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		88B5E46F2986FC4C00568BB5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		88B5E47629880A0300568BB5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		88B5E47829880A1900568BB5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
+		88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseConfig.xcconfig; sourceTree = "<group>"; };
+		88B5E47F29881AFE00568BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		88B5E480298822F300568BB5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,10 @@
 		88A816182984351200A102DB = {
 			isa = PBXGroup;
 			children = (
+				88580FF8298ABF330097D893 /* .swiftlint.yml */,
+				88580FF5298AA94C0097D893 /* Localizable.strings */,
+				88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */,
+				88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */,
 				88A816232984351200A102DB /* Status */,
 				88A816342984351400A102DB /* StatusTests */,
 				88A8163E2984351400A102DB /* StatusUITests */,
@@ -106,6 +126,9 @@
 		88A816232984351200A102DB /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				88B5E47F29881AFE00568BB5 /* Info.plist */,
+				88B5E475298809ED00568BB5 /* Services */,
+				88B5E474298809E500568BB5 /* Repositories */,
 				88B5E46E2986FC3E00568BB5 /* Extensions */,
 				88A8164E2984354200A102DB /* Views */,
 				88A816242984351200A102DB /* StatusApp.swift */,
@@ -173,8 +196,25 @@
 			isa = PBXGroup;
 			children = (
 				88B5E46F2986FC4C00568BB5 /* Color.swift */,
+				88B5E480298822F300568BB5 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88B5E474298809E500568BB5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				88B5E47629880A0300568BB5 /* AuthRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		88B5E475298809ED00568BB5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88B5E47829880A1900568BB5 /* Status.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +227,7 @@
 				88A8161D2984351200A102DB /* Sources */,
 				88A8161E2984351200A102DB /* Frameworks */,
 				88A8161F2984351200A102DB /* Resources */,
+				88580FF7298ABDAA0097D893 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -262,6 +303,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
 				Base,
 			);
 			mainGroup = 88A816182984351200A102DB;
@@ -282,7 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A8162C2984351400A102DB /* Preview Assets.xcassets in Resources */,
+				88580FF3298AA94C0097D893 /* Localizable.strings in Resources */,
 				88A816292984351400A102DB /* Assets.xcassets in Resources */,
+				88B5E47B298815E200568BB5 /* DebugConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B5E47C298815E200568BB5 /* DebugConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,10 +342,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B5E47D298815E200568BB5 /* DebugConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88580FF7298ABDAA0097D893 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88A8161D2984351200A102DB /* Sources */ = {
@@ -308,11 +374,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				881C39082985AE390093E23F /* LoginView.swift in Sources */,
+				88B5E481298822F300568BB5 /* String.swift in Sources */,
+				88B5E47929880A1900568BB5 /* Status.swift in Sources */,
 				88A816272984351200A102DB /* ContentView.swift in Sources */,
 				881C39062985AE250093E23F /* RegisterView.swift in Sources */,
 				88A816252984351200A102DB /* StatusApp.swift in Sources */,
 				88A816542984359300A102DB /* AuthView.swift in Sources */,
 				88B5E4702986FC4C00568BB5 /* Color.swift in Sources */,
+				88B5E47729880A0300568BB5 /* AuthRepository.swift in Sources */,
 				88A816512984356D00A102DB /* AuthViewModel.swift in Sources */,
 				881C390A2985AEBC0093E23F /* Inputs.swift in Sources */,
 			);
@@ -350,11 +419,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		88580FF5298AA94C0097D893 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88580FF4298AA94C0097D893 /* en */,
+				88580FF6298AA95D0097D893 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		88A816432984351400A102DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -413,8 +496,10 @@
 		};
 		88A816442984351400A102DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47E298816E000568BB5 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -467,6 +552,7 @@
 		};
 		88A816462984351400A102DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,16 +561,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Status/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Status/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Status;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -495,6 +583,7 @@
 		};
 		88A816472984351400A102DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5E47A298815E200568BB5 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,16 +592,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Status/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Status/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Status;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -603,7 +694,7 @@
 				88A816442984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		88A816452984351400A102DB /* Build configuration list for PBXNativeTarget "Status" */ = {
 			isa = XCConfigurationList;
@@ -612,7 +703,7 @@
 				88A816472984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		88A816482984351400A102DB /* Build configuration list for PBXNativeTarget "StatusTests" */ = {
 			isa = XCConfigurationList;
@@ -621,7 +712,7 @@
 				88A8164A2984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		88A8164B2984351400A102DB /* Build configuration list for PBXNativeTarget "StatusUITests" */ = {
 			isa = XCConfigurationList;
@@ -630,7 +721,7 @@
 				88A8164D2984351400A102DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

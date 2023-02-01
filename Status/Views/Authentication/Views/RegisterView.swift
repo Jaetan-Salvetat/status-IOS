@@ -9,13 +9,13 @@ import SwiftUI
 
 struct RegisterView: View {
     @ObservedObject var viewModel: AuthViewModel
-    
+
     var body: some View {
         VStack {
             Text("Rejoignez Status")
                 .font(.system(size: 24, weight: .bold))
                 .padding([.bottom], 35)
-            
+
             Input(value: viewModel.username, title: "Nom d’utilisateur")
                 .padding([.bottom], 22)
             Input(value: viewModel.email, title: "E-mail")
@@ -24,11 +24,11 @@ struct RegisterView: View {
                 .padding([.bottom], 22)
             DateInput(viewModel: viewModel)
                 .padding([.bottom], 22)
-            
+
             Button("S'inscrire") {}
                 .padding([.top, .bottom], 15)
                 .buttonStyle(AuthButtonStyle())
-            
+
             HStack {
                 Text("Vous avez déjà un compte ?")
                     .font(.system(size: 12))

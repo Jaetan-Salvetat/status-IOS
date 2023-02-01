@@ -15,8 +15,7 @@ class AuthViewModel: ObservableObject {
     @Published var birthdayMonth = ""
     @Published var birthdayYear = ""
     @Published var currentScreen = AuthScreen.register
-    
-    
+
     func navigate() {
         email = ""
         password = ""
@@ -25,31 +24,30 @@ class AuthViewModel: ObservableObject {
         birthdayYear = ""
         currentScreen = currentScreen == .register ? .login : .register
     }
-    
-    
+
     func getDays() -> [String] {
         var days: [String] = []
-        
+
         for day in 1...31 {
             days.append(String(day))
         }
-        
+
         return days
     }
-    
+
     func getMonths() -> [String] {
         return ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novrembre", "Décembre"]
     }
-    
+
     func getYears() -> [String] {
-        let maxYear = Calendar.current.component(.year, from: Date.now)
+        let maxYear = Calendar.current.component(.year, from: Date())
         let minYear = maxYear - 100
         var years: [String] = []
-        
+
         for year in minYear...maxYear {
             years.append(String(year))
         }
-        
+
         return years.reversed()
     }
 }

@@ -1,0 +1,11 @@
+name: Linter
+on: [push]
+jobs:
+  Linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Lint
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage(Status.tokenKey) private var token = ""
+
     var body: some View {
         AuthView()
     }
