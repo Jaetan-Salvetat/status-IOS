@@ -26,17 +26,30 @@ class AuthViewModel: ObservableObject {
     }
 
     func getDays() -> [String] {
-        var days: [String] = []
+        print(!birthdayMonth.isEmpty && !birthdayYear.isEmpty)
 
-        for day in 1...31 {
-            days.append(String(day))
-        }
+        var dateComponents = DateComponents()
+        dateComponents.month = Int(birthdayMonth) ?? 1
+        dateComponents.year = Int(birthdayYear) ?? 2023
 
-        return days
+        return Calendar.current.date(from: dateComponents)?.daysOfMonth().map { String($0) } ?? []
     }
 
     func getMonths() -> [String] {
-        return ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novrembre", "Décembre"]
+        return [
+            "Janvier",
+            "Février",
+            "Mars",
+            "Avril",
+            "Mai",
+            "Juin",
+            "Juillet",
+            "Août",
+            "Septembre",
+            "Octobre",
+            "Novrembre",
+            "Décembre"
+        ]
     }
 
     func getYears() -> [String] {

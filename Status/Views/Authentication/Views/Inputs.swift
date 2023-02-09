@@ -63,7 +63,7 @@ struct SecureInput: View {
 
 struct DateInput: View {
     @ObservedObject var viewModel: AuthViewModel
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Date de naissance")
@@ -75,6 +75,7 @@ struct DateInput: View {
                     title: "Jour",
                     value: viewModel.birthdayDay,
                     items: viewModel.getDays(),
+                    isEnabled: !viewModel.birthdayMonth.isEmpty || !viewModel.birthdayYear.isEmpty,
                     onChange: {
                         viewModel.birthdayDay = $0
                     }
@@ -106,12 +107,15 @@ private struct DropDown: View {
     var title: String
     var value: String
     var items: [String]
+    var isEnabled: Bool = true
     var onChange: (String) -> Void
 
     var body: some View {
         Menu {
-            ForEach(items, id: \.self) { text in
-                Button(text) { onChange(text) }
+            if isEnabled {
+                ForEach(items, id: \.self) { text in
+                    Button(text) { onChange(text) }
+                }
             }
         } label: {
             HStack {

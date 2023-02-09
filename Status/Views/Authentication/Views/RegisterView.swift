@@ -22,8 +22,8 @@ struct RegisterView: View {
                 .padding([.bottom], 22)
             SecureInput(value: viewModel.password)
                 .padding([.bottom], 22)
-            DateInput(viewModel: viewModel)
-                .padding([.bottom], 22)
+            // DateInput(viewModel: viewModel)
+            //    .padding([.bottom], 22)
 
             Button("S'inscrire") {}
                 .padding([.top, .bottom], 15)
