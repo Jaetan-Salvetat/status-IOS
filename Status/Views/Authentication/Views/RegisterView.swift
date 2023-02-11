@@ -16,28 +16,51 @@ struct RegisterView: View {
                 .font(.system(size: 24, weight: .bold))
                 .padding([.bottom], 35)
 
-            Input(value: viewModel.username, title: "Nom d’utilisateur")
+            Input(
+                value: $viewModel.username,
+                title: "Nom d’utilisateur",
+                errorMessage: viewModel.inputErrors.contains(.username)
+                    ? "le nom d'utilisateur ne peut pas être vide."
+                    : ""
+            ).padding([.bottom], 22)
+            
+            Input(
+                value: $viewModel.email,
+                title: "E-mail",
+                errorMessage: viewModel.inputErrors.contains(.email)
+                    ? "l'email n'est pas au bon format."
+                    : ""
+            ).padding([.bottom])
+    
+            SecureInput(
+                value: $viewModel.password,
+                isInError: viewModel.inputErrors.contains(.password)
+            ).padding([.bottom], 22)
+            
+            DateInput(viewModel: viewModel)
                 .padding([.bottom], 22)
-            Input(value: viewModel.email, title: "E-mail")
-                .padding([.bottom], 22)
-            SecureInput(value: viewModel.password)
-                .padding([.bottom], 22)
-            // DateInput(viewModel: viewModel)
-            //    .padding([.bottom], 22)
-
-            Button("S'inscrire") {}
-                .padding([.top, .bottom], 15)
-                .buttonStyle(AuthButtonStyle())
 
             HStack {
-                Text("Vous avez déjà un compte ?")
-                    .font(.system(size: 12))
-                Text("Connectez-vous")
-                    .font(.system(size: 12))
-                    .underline()
-                    .onTapGesture {
-                        viewModel.navigate()
-                    }
+                if viewModel.isLoading {
+                    ProgressView()
+                } else {
+                    Button("S'inscrire") { viewModel.validForm() }
+                }
+            }
+            .padding([.top, .bottom], 15)
+            .buttonStyle(AuthButtonStyle())
+
+            HStack {
+                if !viewModel.isLoading {
+                    Text("Vous avez déjà un compte ?")
+                        .font(.system(size: 12))
+                    Text("Connectez-vous")
+                        .font(.system(size: 12))
+                        .underline()
+                        .onTapGesture {
+                            viewModel.navigate()
+                        }
+                }
             }
         }
     }

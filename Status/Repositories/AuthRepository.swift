@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 /*let url = URL(string: "https://jsonplaceholder.typicode.com/todos/1")!
 var request = URLRequest(url: url)
@@ -25,22 +26,22 @@ dataTask.resume()*/
 
 class AuthRepository {
      private let apiUri = Bundle.main.infoDictionary?["API_BASE_URL"] as? String // \(apiUri)/auth/login
+    @AppStorage(Status.tokenKey) private var token = ""
 
-    func login() async -> Int {
+    func login(_ email: String, _ password: String) async -> Int {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
-        UserDefaults.standard.set("myToken", forKey: Status.tokenKey)
+        token = "myToken"
         return 200
     }
 
-    func register() async -> Int {
+    func register(_ email: String, _ username: String, _ password: String) async -> Int {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
-        UserDefaults.standard.set("myToken", forKey: Status.tokenKey)
+        token = "myToken"
         return 201
     }
 
     func validateSession() async -> Int {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
-        UserDefaults.standard.set("myToken", forKey: Status.tokenKey)
         return 200
     }
 }

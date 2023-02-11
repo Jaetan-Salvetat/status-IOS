@@ -7,30 +7,20 @@
 
 import Foundation
 
-extension Date {
-    private func startOfMonth() -> Date? {
-        return Calendar
-            .current
-            .date(from: Calendar.current.dateComponents([.day, .year, .month], from: Calendar.current.startOfDay(for: self)))
+extension Date {    
+    static func getMinDateFromBirthday() -> Date {
+        let date = Date()
+        var dateComponents = DateComponents()
+        dateComponents.year = -100
+        
+        return Calendar.current.date(byAdding: dateComponents, to: date) ?? date
     }
     
-    func lastDayOfMonth() -> Int? {
-        if self.startOfMonth() == nil {
-            return nil
-        }
-
-        let dateComponents =  Calendar
-            .current
-            .date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth()!)
+    static func getMaxDateFromBirthday() -> Date {
+        let date = Date()
+        var dateComponents = DateComponents()
+        dateComponents.year = -14
         
-        return Calendar.current.dateComponents([.day], from: dateComponents!).day ?? 1
-    }
-    
-    func daysOfMonth() -> [Int] {
-        if self.lastDayOfMonth() == nil {
-            return []
-        }
-        
-        return [Int](1...self.lastDayOfMonth()!)
+        return Calendar.current.date(byAdding: dateComponents, to: date) ?? date
     }
 }

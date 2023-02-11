@@ -11,7 +11,11 @@ struct ContentView: View {
     @AppStorage(Status.tokenKey) private var token = ""
 
     var body: some View {
-        AuthView()
+        if token.isEmpty {
+            AuthView()
+        } else {
+            AppView()
+        }
     }
 }
 

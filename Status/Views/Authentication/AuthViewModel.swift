@@ -11,61 +11,68 @@ class AuthViewModel: ObservableObject {
     @Published var email = ""
     @Published var username = ""
     @Published var password = ""
-    @Published var birthdayDay = ""
-    @Published var birthdayMonth = ""
-    @Published var birthdayYear = ""
+    @Published var birthday = Date.getMaxDateFromBirthday()
     @Published var currentScreen = AuthScreen.register
+    @Published var inputErrors: [InputErrorType] = []
+    @Published var isLoading = false
+
+    func getBurthdayDateRange() -> ClosedRange<Date> {
+        let minDate = Date.getMinDateFromBirthday()
+        let maxDate = Date.getMaxDateFromBirthday()
+        
+        return minDate...maxDate
+    }
 
     func navigate() {
         email = ""
         password = ""
-        birthdayDay = ""
-        birthdayMonth = ""
-        birthdayYear = ""
+        birthday = Date()
+        inputErrors = []
         currentScreen = currentScreen == .register ? .login : .register
     }
+    
+    func validForm() {
+        if !isInputsValid() { return }
+        isLoading = true
 
-    func getDays() -> [String] {
-        print(!birthdayMonth.isEmpty && !birthdayYear.isEmpty)
-
-        var dateComponents = DateComponents()
-        dateComponents.month = Int(birthdayMonth) ?? 1
-        dateComponents.year = Int(birthdayYear) ?? 2023
-
-        return Calendar.current.date(from: dateComponents)?.daysOfMonth().map { String($0) } ?? []
-    }
-
-    func getMonths() -> [String] {
-        return [
-            "Janvier",
-            "Février",
-            "Mars",
-            "Avril",
-            "Mai",
-            "Juin",
-            "Juillet",
-            "Août",
-            "Septembre",
-            "Octobre",
-            "Novrembre",
-            "Décembre"
-        ]
-    }
-
-    func getYears() -> [String] {
-        let maxYear = Calendar.current.component(.year, from: Date())
-        let minYear = maxYear - 100
-        var years: [String] = []
-
-        for year in minYear...maxYear {
-            years.append(String(year))
+        print(currentScreen)
+        Task(priority: .background) {
+            if currentScreen == AuthScreen.login {
+                let response = await Status.authRepository.login(email, password)
+                print("login: \(response)")
+            } else {
+                let response = await Status.authRepository.register(email, username, password)
+                print("register: \(response)")
+            }
+            
+            DispatchQueue.main.async {
+                self.isLoading = false
+            }
         }
-
-        return years.reversed()
+    }
+    
+    private func isInputsValid() -> Bool {
+        inputErrors = []
+        if !email.isEmail() {
+            inputErrors.append(.email)
+        }
+        if !username.isUsername() && currentScreen == AuthScreen.register {
+            inputErrors.append(.username)
+        }
+        if !password.isPassword() {
+            inputErrors.append(.password)
+        }
+        return inputErrors.isEmpty
     }
 }
 
 enum AuthScreen {
     case register
     case login
+}
+
+enum InputErrorType {
+    case email
+    case password
+    case username
 }
