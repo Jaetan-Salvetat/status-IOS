@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage(Status.tokenKey) private var token = ""
+    @AppStorage(Status.tokenKey) var token = ""
+    @ObservedObject var state = StateViewModel()
 
     var body: some View {
-        if token.isEmpty {
+        if token.isNotEmpty() && state.isSessionRequestReceived {
+            AppView()
+        } else if token.isEmpty && state.isSessionRequestReceived {
             AuthView()
         } else {
-            AppView()
+            SplashScreen()
         }
     }
 }

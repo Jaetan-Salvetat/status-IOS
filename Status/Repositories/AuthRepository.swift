@@ -40,8 +40,8 @@ class AuthRepository {
         return 201
     }
 
-    func validateSession() async -> Int {
+    func validateSession() async {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
-        return 200
+        UserDefaults.standard.set("my token", forKey: Status.tokenKey)
     }
 }
